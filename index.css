@@ -1,47 +1,70 @@
+/* 在文件顶部添加 */
+html {
+    background: url('img/main.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
 
-/* 在现有h1样式中添加背景 */
-h1 {
-    /* 原有样式保持不变 */
-    background-color: rgb(255, 255, 255); /* 添加半透明背景 */
-    padding: 20px;
+body {
+    background: rgba(255, 255, 255, 0.6); /* 修改透明度为60% */
 }
 
 h1 {
-    color: rgba(36, 39, 242, 0.375);
-        display: flex;
-        justify-content: center; /* 水平居中 */
+    color: rgba(36, 39, 242, 0.6); /* 原值0.375改为0.6 */
 }
+
 h2 {
-    color: #333;
-    border-bottom: 2px solid #ddd;
-    padding: 12px;
-    margin-top: 20px;
-    border-radius: 8px;
-    /* 为每个分类添加不同背景色 */
+    color: #33333399; /* 原值bb改为99（60%透明度） */
+    border-bottom: 2px solid #dddddd99; /* 原值b4改为99 */
 }
 
 /* 常用工具 */
 h2:first-of-type {
-    background-color: #e3f2fd;
-    border-left: 4px solid #2196f3;
+    background-color: #e3f2fd99; /* 原值ac改为99 */
+    border-left: 4px solid #2195f399; /* 原值a6改为99 */
 }
 
 /* 学习资源 */
 h2:nth-of-type(2) {
-    background-color: #e8f5e9;
-    border-left: 4px solid #4caf50;
+    background-color: #e8f5e999; /* 原值bc改为99 */
+    border-left: 4px solid #4caf4f99; /* 原值af改为99 */
 }
 
 /* 娱乐相关 */
 h2:nth-of-type(3) {
-    background-color: #fff3e0;
-    border-left: 4px solid #ff9800;
+    background-color: #fff3e099; /* 原值a5改为99 */
+    border-left: 4px solid #ff990099; /* 原值ac改为99 */
 }
 
 /* 其他 */
 h2:last-of-type {
-    background-color: #f3e5f5;
-    border-left: 4px solid #9c27b0;
+    background-color: #f3e5f599; /* 添加透明度 */
+}
+
+/* 列表背景 */
+h2:first-of-type + ul {
+    background-color: #f5fbff99; /* 添加透明度 */
+    border: 1px solid #90caf999; /* 添加透明度 */
+}
+
+h2:nth-of-type(2) + ul {
+    background-color: #f5fff799; /* 添加透明度 */
+    border: 1px solid #a5d6a799; /* 添加透明度 */
+}
+
+h2:nth-of-type(3) + ul {
+    background-color: #fff8f099; /* 添加透明度 */
+    border: 1px solid #ffcc8099; /* 添加透明度 */
+}
+
+h2:last-of-type + ul {
+    background-color: #fcf3ff99; /* 添加透明度 */
+    border: 1px solid #ce93d899; /* 添加透明度 */
+}
+
+/* 页脚背景 */
+footer {
+    background-color: rgba(46, 225, 171, 0.6) !important; /* 原值0.383改为0.6 */
 }
 
 ul {
@@ -52,6 +75,8 @@ ul {
     /* 为列表添加配套背景色 */
 }
 
+/* 删除或注释掉后续重复定义的样式 */
+/*
 h2:first-of-type + ul {
     background-color: #f5fbff;
     border: 1px solid #90caf9;
@@ -70,6 +95,18 @@ h2:nth-of-type(3) + ul {
 h2:last-of-type + ul {
     background-color: #fcf3ff;
     border: 1px solid #ce93d8;
+}
+*/
+
+/* 新增折叠状态透明度控制 */
+ul.collapsed {
+    background-color: rgba(245, 251, 255, 0.6) !important;
+    border-color: rgba(144, 202, 249, 0.6) !important;
+}
+
+/* 确保所有分类标题透明度 */
+h2.collapsible {
+    background-color: rgba(227, 242, 253, 0.6);
 }
 
 /* 列表样式 */
@@ -144,3 +181,13 @@ ul.collapsed {
 .arrow.collapsed {
     transform: rotate(90deg);
 }
+
+.arrow {
+    margin-left: -0.5em;  /* 添加左边距（约半个字符宽度） */
+    display: inline-block; /* 确保边距生效 */
+}
+.arrow {
+    margin-left: -0.5em;  /* 添加左边距（约半个字符宽度） */
+    display: inline-block; /* 确保边距生效 */
+}
+

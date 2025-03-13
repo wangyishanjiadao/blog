@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    网站主入口文件
+    包含资源分类导航和折叠功能
+    依赖文件：index.css | index.js 
+-->
 
 <head>
+    <!-- 基本设置 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
+    
+    <!-- 样式表链接 -->
     <link rel="stylesheet" href="./index.css">
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <!-- 主标题 -->
     <h1>牢杉的资源更新站</h1>
-    
-    <!-- 在body标签内修改分类结构 -->
+
+    <!-- 可折叠分类区块 - 常用工具 -->
     <h2 class="collapsible">常用工具<span class="arrow">▶</span></h2>
     <ul>
         <li><a href="neirong/HEU KMS Activator.html">HEU KMS Activator，win激活软件</a></li>
         <li><a href="#">工具2</a></li>
         <li><a href="#">工具3</a></li>
     </ul>
-    
-    <!-- 其他分类结构保持相同修改方式 -->
+
+    <!-- 可折叠分类区块 - 学习资源 -->
     <h2 class="collapsible">学习资源<span class="arrow">▶</span></h2>
     <ul>
         <li><a href="#">学习资源1</a></li>
         <li><a href="#">学习资源2</a></li>
     </ul>
 
+    <!-- 可折叠分类区块 - 娱乐相关 -->
     <h2 class="collapsible">娱乐相关<span class="arrow">▶</span></h2>
     <ul>
         <li><a href="https://bilibili.com">哔哩哔哩</a></li>
+        <!-- 图片链接示例 -->
         <li><a href="haha.html"><img src="img/kfc.jpg" alt="kfc疯狂星期四vivo50"></a></li>
     </ul>
 
+    <!-- 可折叠分类区块 - 其他 -->
     <h2 class="collapsible">其他<span class="arrow">▶</span></h2>
     <ul>
         <li><a href="https://github">GitHub</a></li>
     </ul>
 
+    <!-- 交互功能脚本 -->
     <script src="./index.js"></script>
-</body>
 
+    <!-- 页脚声明 -->
+    <footer style="background-color: rgba(46, 225, 171, 0.383); color: rgb(0, 0, 0); text-align: center; padding: 15px 0; margin-top: auto;">
+        此网页由 GitHub Pages 代理托管
+    </footer>
+</body>
 </html>
